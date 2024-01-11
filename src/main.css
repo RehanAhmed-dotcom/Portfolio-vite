@@ -1,18 +1,87 @@
-.Home{
-    width:100%;
-    height: 100vh;
-   background: url(./assets/home-bg.jpg) repeat scroll center center/cover;
-/* display: flex;
+html {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+.Home {
+  width: 100%;
+  height: 100vh;
+  background: url(./assets/home-bg.jpg) repeat scroll center center/cover;
+  /* display: flex;
 align-items: center;
 justify-content: center; */
 }
-.Container{
-    display: flex;
-    align-items: center;
-    max-width: 720px;
-    background-color: red;
-    justify-content: center;
-    align-self: center;
-    width: 100%;
-    /* height: 100vh; */
+.Container {
+  display: flex;
+  /* align-items: center; */
+  max-width: 1400px;
+  /* background-color: red; */
+  justify-content: center;
+  color: white;
+  flex-direction: column;
+  /* align-self: center; */
+  width: 100%;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+.Container h3 {
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+.SocialLinks {
+  margin-top: 20px;
+  /* padding: 10px 10px; */
+}
+.SocialLinks a {
+  margin-right: 20px;
+  /* margin: 10px 0px; */
+  /* padding: 10px 10px; */
+}
+.About {
+  width: 100%;
+  height: 100vh;
+  /* background-color: red; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.topContainer {
+  max-width: 1200px;
+  /* background-color: blue; */
+  /* height: 100vh; */
+  width: 100%;
+  /* align-self: center; */
+  /* padding-top: 10%; */
+  /* display: flex; */
+  margin-left: auto;
+  margin-right: auto;
+}
+.userInfo {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: blue; */
+  flex-direction: row;
+  padding-top: 10%;
+  width: 100%;
+}
+.imageView {
+  height: 400px;
+  width: 30%;
+  border: 25px solid orange;
+}
+.imageView img {
+  margin-top: -60px;
+  margin-left: 40px;
+}
+
+.userContent {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: green; */
+}
+
+.userContent p {
+  margin-top: 20px;
+  letter-spacing: 2px;
 }
