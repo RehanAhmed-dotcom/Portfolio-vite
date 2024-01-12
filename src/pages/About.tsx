@@ -1,6 +1,8 @@
-import React from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
+import CarouselItem from "../Components/CarouselItem";
+import { dataCarousal, responsive } from "../Components/dataCarousal";
 const About = () => {
   return (
     <div className="About">
@@ -27,20 +29,79 @@ const About = () => {
             </p>
           </div>
         </div>
-        <Carousel>
-          <div>
-            <img src="src/assets/1.jpeg" />
-            <p className="legend">Legend 1</p>
-          </div>
-          <div>
-            <img src="assets/2.jpeg" />
-            <p className="legend">Legend 2</p>
-          </div>
-          <div>
-            <img src="assets/3.jpeg" />
-            <p className="legend">Legend 3</p>
-          </div>
-        </Carousel>
+        <div className="carousel">
+          <Carousel
+            swipeable={true}
+            draggable={true}
+            showDots={true}
+            responsive={responsive}
+            arrows={false}
+            ssr={true} // means to render carousel on server-side.
+            infinite={true}
+            autoPlay={true}
+            autoPlaySpeed={3000}
+            keyBoardControl={true}
+            customTransition="all .5"
+            transitionDuration={500}
+            containerClass="carousel-container"
+            removeArrowOnDeviceType={["tablet", "mobile"]}
+            deviceType={"desktop"}
+            dotListClass="carousel-dot"
+            itemClass="carousel-item-padding-40-px"
+          >
+            {dataCarousal.map((item) => (
+              <CarouselItem
+                image={item.image}
+                heading={item.heading}
+                detail={item.detail}
+              />
+            ))}
+          </Carousel>
+        </div>
+
+        {/* <div className="carousel">
+          <CCarousel controls indicators dark>
+            <CCarouselItem>
+              <CImage
+                className="d-block w-100"
+                src={"/src/assets/avatar.jpg"}
+                alt="slide 1"
+              />
+              <CCarouselCaption className="d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>
+                  Some representative placeholder content for the first slide.
+                </p>
+              </CCarouselCaption>
+            </CCarouselItem>
+            <CCarouselItem>
+              <CImage
+                className="d-block w-100"
+                src={"/src/assets/avatar.jpg"}
+                alt="slide 2"
+              />
+              <CCarouselCaption className="d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>
+                  Some representative placeholder content for the first slide.
+                </p>
+              </CCarouselCaption>
+            </CCarouselItem>
+            <CCarouselItem>
+              <CImage
+                className="d-block w-100"
+                src={"/src/assets/avatar.jpg"}
+                alt="slide 3"
+              />
+              <CCarouselCaption className="d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>
+                  Some representative placeholder content for the first slide.
+                </p>
+              </CCarouselCaption>
+            </CCarouselItem>
+          </CCarousel>
+        </div> */}
       </div>
     </div>
   );
