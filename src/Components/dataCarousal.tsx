@@ -50,3 +50,36 @@ export const responsive = {
     // slidesToSlide: 1, // optional, default to 1.
   },
 };
+
+export const portfolioData = [
+  {
+    id:1,
+    name:"App1",
+    description:"App"
+  },
+  {
+    id:2,
+    name:"App2",
+    description:"App"
+  },
+  {
+    id:3,
+    name:"App3",
+    description:"App"
+  },
+  {
+    id:4,
+    name:"Web1",
+    description:"Web"
+  },
+  {
+    id:5,
+    name:"Web2",
+    description:"Web"
+  },
+  {
+    id:6,
+    name:"Web3",
+    description:"Web"
+  },
+]
