@@ -4,7 +4,7 @@ const Journal = () => {
     <div className="Portfolio">
       <div className="topContainer">
         <div className="firstdiv">
-          <h2>JOURNAL edited by saad</h2>
+          <h2>JOURNAL edited by saad mughal</h2>
 
           <div className="grid-container">
             {portfolioData.map((item) => (
